@@ -1,0 +1,38 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid black;
+}
+
+.nameTitle{
+    font-family: monospace;
+    flex-direction: column;
+    display: flex;
+}
+
+.twitterHandle{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.projects{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+  }
+
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }
