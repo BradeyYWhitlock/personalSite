@@ -4,7 +4,6 @@
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 50px;
-    border-bottom: 1px solid black;
 }
 
 .nameTitle{
@@ -13,26 +12,42 @@
     display: flex;
 }
 
-.twitterHandle{
+.softwareDeveloper {
     font-size: 20px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
+}
+
+.socialMedia {
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .projects{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
-.ant-carousel .slick-slide {
+.sectionHeader{
+    font-size: 40px;
+    font-family: monospace;
     text-align: center;
-    height: 160px;
-    line-height: 160px;
-    background: #364d79;
-    overflow: hidden;
-  }
+    width: 100%;
+    margin-bottom: 50px;
+}
 
-  .ant-carousel .slick-slide h3 {
-    color: #fff;
-  }
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    height: 50px;
+    background-color: #F2F2F2;
+    margin-top: 20px;
+}
