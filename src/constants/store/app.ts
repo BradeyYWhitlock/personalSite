@@ -1,0 +1,2 @@
+export const SET_LATEST_TWEET = 'SET_LATEST_TWEET';
+export const SET_IS_MOBILE = 'SET_IS_MOBILE';
