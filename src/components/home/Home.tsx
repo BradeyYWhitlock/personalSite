@@ -9,6 +9,7 @@ import iphoneX from '../../assets/images/iphoneXBradey.png'
 import twitterIcon from '../../assets/images/socialMediaIcons/twitterIcon.png'
 import instagramIcon from '../../assets/images/socialMediaIcons/instagramIcon.png'
 import linkedInIcon from '../../assets/images/socialMediaIcons/linkedInIcon.png'
+import { NavLink } from 'react-router-dom';
 
 function mapDispatchToProps(dispatch: Function) {
     return {
@@ -29,6 +30,10 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
         props.setIsMobile(isMobile)
     })
 
+    const movePageRight = () => {
+
+    }
+
     return (
         <Fragment>
             <div className={`${props.isMobile ? 'homeMobile' : 'homeWeb'}`}>
@@ -46,9 +51,15 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                     </div>
                 </div>
             </div>
-            <div className='rightPanel'>
+            <NavLink to='/skills' className='rightPanel' onClick={() => movePageRight()}>
                 Skills
-            </div>
+            </NavLink>
+            <NavLink to='/projects' className='bottomPanel' onClick={() => movePageRight()}>
+                Projects
+            </NavLink>
+            <NavLink to='/contactMe' className='topPanel' onClick={() => movePageRight()}>
+                Contact Me
+            </NavLink>
         </Fragment>
 
     )

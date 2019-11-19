@@ -9,6 +9,18 @@ export function setIsMobile(isMobile: boolean) {
     return { type: Constants.SET_IS_MOBILE, isMobile }
 }
 
+export function setEmailSender(sender: string) {
+    return { type: Constants.SET_EMAIL_SENDER, sender }
+}
+
+export function setEmailMessage(message: string) {
+    return { type: Constants.SET_EMAIL_MESSAGE, message }
+}
+
+export function setEmailResponse(response: Record<string, any>) {
+    return { type: Constants.SET_EMAIL_RESPONSE, response }
+}
+
 export function getLatestTweet() {
     return async function (dispatch: Function) {
         TwitterService.getLatestTweet().then(res => {

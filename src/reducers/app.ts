@@ -3,7 +3,10 @@ import { AppState } from '../types/app'
 
 export const appState: AppState = {
     latestTweet: null,
-    isMobile: false
+    isMobile: false,
+    emailSender: '',
+    emailMessage: '',
+    emailResponse: null
 };
 
 export default function app(state = appState, action) {
@@ -15,6 +18,18 @@ export default function app(state = appState, action) {
         case Constants.SET_IS_MOBILE:
             return Object.assign({}, state, {
                 isMobile: action.isMobile
+            });
+        case Constants.SET_EMAIL_SENDER:
+            return Object.assign({}, state, {
+                emailSender: action.sender
+            });
+        case Constants.SET_EMAIL_MESSAGE:
+            return Object.assign({}, state, {
+                emailMessage: action.message
+            });
+        case Constants.SET_EMAIL_RESPONSE:
+            return Object.assign({}, state, {
+                emailResponse: action.response
             });
         default:
             return state;
