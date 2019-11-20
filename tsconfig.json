@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "baseUrl": "./src",
-        "outDir": "build/dist",
+        "outDir": "dist",
         "target": "es2018",
         "lib": [
             "es2018",

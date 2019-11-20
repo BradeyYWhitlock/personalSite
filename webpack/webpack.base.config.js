@@ -1,12 +1,11 @@
 var path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-// function getConfigFile(env) {
-//   return require(path.resolve(__dirname, `../config/${env}.js`));
-// }
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
+  template: "./src/index.html",
+  filename: "./index.html"
+});
 
 module.exports = env => {
-  // const configFile = getConfigFile(env.NODE_ENV);
   return {
     entry: [path.join(__dirname, "../src/index.tsx")],
     module: {
@@ -33,18 +32,7 @@ module.exports = env => {
         }
       ]
     },
-    plugins: [
-      new HtmlWebpackPlugin({
-        filename: "../dist/index.html",
-        template: path.resolve(__dirname, "../src/index.html")
-      })
-    ],
-    output: {
-      path: path.resolve(__dirname, "../build/dist/"),
-      publicPath: "/",
-      filename: "bundle.min.js"
-    },
-    // externals: [{ Config: JSON.stringify(configFile) }],
+    plugins: [htmlWebpackPlugin],
     resolve: {
       extensions: [".tsx", ".ts", ".js", ".jsx"]
     }
