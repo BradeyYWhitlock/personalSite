@@ -5,8 +5,7 @@
   "main": "index.tsx",
   "scripts": {
     "start": "webpack-dev-server --env.NODE_ENV='local' --config  ./webpack/webpack.local.config.js",
-    "build": "webpack --mode production",
-    "build:production": "webpack --env.NODE_ENV='production' --config ./webpack/webpack.config.js"
+    "build": "webpack --env.NODE_ENV='production' --config ./webpack/webpack.config.js"
   },
   "keywords": [],
   "author": "",
