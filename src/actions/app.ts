@@ -21,6 +21,10 @@ export function setEmailResponse(response: Record<string, any>) {
     return { type: Constants.SET_EMAIL_RESPONSE, response }
 }
 
+export function setProjectAnimationClass(projectSelected: string) {
+    return { type: Constants.SET_PROJECT_ANIMATION, projectSelected }
+}
+
 export function getLatestTweet() {
     return async function (dispatch: Function) {
         TwitterService.getLatestTweet().then(res => {

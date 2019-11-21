@@ -12,6 +12,11 @@ export interface AppRoute {
 export default [
   {
     component: Home,
+    path: '/',
+    exact: true
+  },
+  {
+    component: Home,
     path: '/home',
     exact: true
   },

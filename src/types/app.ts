@@ -13,6 +13,12 @@ export interface ProjectsProps {
     isMobile: boolean;
 }
 
+export interface ProjectsCardProps {
+    project: Record<string, any>;
+    projectSelected: string;
+    setProjectAnimationClass: Function;
+}
+
 export interface ContactMeProps {
     setIsMobile: Function;
     isMobile: boolean;
@@ -37,5 +43,6 @@ export interface AppState {
     isMobile: boolean;
     emailSender: string;
     emailMessage: string;
-    emailResponse: Record<string, any>
+    emailResponse: Record<string, any>;
+    projectSelected: string;
 }
