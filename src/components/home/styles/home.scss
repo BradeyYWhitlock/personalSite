@@ -1,47 +1,198 @@
 @import '../../../styles/colors';
 @import '../../../styles/comon';
 
-.homeWeb{
+.home{
+    display: flex;
+    height: 100vh;
+    justify-self: center;
+    justify-content: center;
+    padding-top: 150px;
+    background-color: #28262c;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    color: #f9f5ff;
+}
+
+.home2{
+    display: flex;
+    height: 100vh;
+    justify-self: center;
+    justify-content: center;
+    padding-top: 150px;
+    background-color: #f9f5ff;
+    color: #28262c;
+}
+
+.home2:before {
+    content: "";
+    background: red;
+    height: 40px;
+    transform: skewY(-3deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.home2:before{    
+    top: -20px;    
+}
+
+
+.homePicture {
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.myInfoSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.aboutMe {
+    margin-top: 10px;
+    width: 70%;
+}
+
+.aboutMeSection {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.socialIcon {
+    height: 80px;
+    width: 80px;
+    &Insta {
+        height: 70px;
+        width: 70px;
+    }
+
+    &linkedIn {
+        height: 62px;
+        width: 62px;
+        border-radius: 10px;
+    }
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.projectsSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    text-align: center;
+}
+
+.project {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
-    margin-bottom: 50px;
-    background-color: $backgroundColor;
-    color: white;
-    flex-direction: row;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: black;
+    height: 200px;
+    width: 600px;
 }
 
-.homeMobile{
+.projectsHeader {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.tcl:after {
+    content:'';
+    background: url('../../../assets/images/projects/tcl.png') no-repeat;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    border-radius: 10px;
+    opacity: 0.6; /* Here is your opacity */
+
+    &:hover {
+        opacity: 1;
+    }
+}
+.tcl {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
-    width: 100%;
-    margin-bottom: 50px;
-    background-color: $backgroundColor;
-    color: white;
-    flex-direction: column;
+    position: relative;
+    font-size: 25px;
+    height: 200px;
+    width: 600px;
+    margin-bottom: 20px;
+    box-shadow: 5px 10px 10px #111013;
 }
 
-.nameTitle{
-    font-family: monospace;
-    flex-direction: column;
+
+.malf:after {
+    content:'';
+    background: url('../../../assets/images/projects/malf.png') no-repeat;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    border-radius: 10px;
+    opacity: 0.6; /* Here is your opacity */
+
+    &:hover {
+        opacity: 1;
+    }
+}
+.malf {
     display: flex;
-}
-
-.softwareDeveloper {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 5px;
-}
-
-.socialMedia {
-    display: flex;
-    font-size: 20px;
-    text-align: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 5px;
-    justify-content: center;
-    flex-direction: column;
+    position: relative;
+    font-size: 25px;
+    height: 200px;
+    width: 600px;
+    margin-bottom: 20px;
+    box-shadow: 5px 10px 10px #111013;
+}
+
+.hT:after {
+    content:'';
+    background: url('../../../assets/images/projects/hT.png') no-repeat;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    border-radius: 10px;
+    opacity: 0.6; /* Here is your opacity */
+
+    &:hover {
+        opacity: 1;
+    }
+}
+.hT {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    font-size: 25px;
+    height: 200px;
+    width: 600px;
+    margin-bottom: 20px;
+    box-shadow: 5px 10px 10px #111013;
 }
