@@ -20,8 +20,6 @@ export interface ProjectsCardProps {
 }
 
 export interface ContactMeProps {
-    setIsMobile: Function;
-    isMobile: boolean;
     setEmailSender: Function;
     setEmailMessage: Function;
     setEmailResponse: Function;

@@ -1,6 +1,7 @@
 import React, { ReactElement, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { Button, Input } from 'antd';
+const { TextArea } = Input;
 import { ContactMeProps } from '../../types/app'
 import axios from 'axios'
 import './styles/contactMe.scss'
@@ -46,46 +47,28 @@ const ContactMe: React.FC<ContactMeProps> = (props): ReactElement => {
             .catch(err => console.log(err))
     }
 
-    const clearInputs = () => {
-        props.setEmailSender('')
-        props.setEmailMessage('')
-        props.setEmailResponse(null)
-    }
-
     return (
         <Fragment>
             {props.emailResponse === null ?
                 <div className='contactMePage'>
-                    <div className='sender'>
-                        <TextField
-                            id="sender"
-                            label="Who Are You?"
-                            margin="normal"
-                            InputLabelProps={{ className: 'overrideColor' }}
-                            InputProps={{ className: 'overrideColor', disableUnderline: true }}
-                            value={props.emailSender}
-                            onChange={(event) => props.setEmailSender(event.target.value)}
-                        />
+                    <div className='contactMeInputs'>
+                    <Input
+                        placeholder="Who Are You?"
+                        className='styledInput sender'
+                        value={props.emailSender}
+                        onChange={(event) => props.setEmailSender(event.target.value)}
+                    />
+                     <TextArea
+                        rows={5}
+                        placeholder="Send Me A Message"
+                        className='styledInput message'
+                        value={props.emailMessage}
+                        onChange={(event) => props.setEmailMessage(event.target.value)}
+                    />
                     </div>
-                    <div className='message'>
-                        <TextField
-                            id="message"
-                            label="Send Me A Message"
-                            margin="normal"
-                            multiline
-                            fullWidth
-                            rowsMax='10'
-                            InputLabelProps={{ className: 'overrideColor' }}
-                            InputProps={{ className: 'overrideColor', disableUnderline: true }}
-                            value={props.emailMessage}
-                            onChange={(event) => props.setEmailMessage(event.target.value)}
-                        />
-                    </div>
-                    <div onClick={() => sendEmail()}>
-                        <Fab variant="extended" color="primary" aria-label="add">
-                            <span className='send'>Send Message</span><i className="fas fa-paper-plane"></i>
-                        </Fab>
-                    </div>
+                    <Button onClick={() => sendEmail()} type="primary" shape="round" size='large'>
+                        Send Message <i className="fas fa-paper-plane planeIcon"/>
+                    </Button>
                 </div> :
                 <div className='contactMePage'>
                     {props.emailResponse.status === 200 ?
@@ -103,10 +86,6 @@ const ContactMe: React.FC<ContactMeProps> = (props): ReactElement => {
                     }
                 </div>
             }
-
-            <NavLink to='/home' className='bottomPanel' onClick={() => clearInputs()}>
-                Home
-            </NavLink>
         </Fragment>
     )
 }
