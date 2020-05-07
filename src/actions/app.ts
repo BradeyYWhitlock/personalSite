@@ -21,6 +21,10 @@ export function setEmailResponse(response: Record<string, any>) {
     return { type: Constants.SET_EMAIL_RESPONSE, response }
 }
 
+export function setLoadingEmailSent(loadingEmailSent: boolean) {
+    return { type: Constants.SET_LOADING_EMAIL_SENT, loadingEmailSent }
+}
+
 export function setProjectAnimationClass(projectSelected: string) {
     return { type: Constants.SET_PROJECT_ANIMATION, projectSelected }
 }

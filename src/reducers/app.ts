@@ -7,7 +7,8 @@ export const appState: AppState = {
     emailSender: '',
     emailMessage: '',
     emailResponse: null,
-    projectSelected: ''
+    projectSelected: '',
+    loadingEmailSent: false
 };
 
 export default function app(state = appState, action) {
@@ -31,6 +32,10 @@ export default function app(state = appState, action) {
         case Constants.SET_EMAIL_RESPONSE:
             return Object.assign({}, state, {
                 emailResponse: action.response
+            });
+        case Constants.SET_LOADING_EMAIL_SENT:
+            return Object.assign({}, state, {
+                loadingEmailSent: action.loadingEmailSent
             });
         case Constants.SET_PROJECT_ANIMATION:
             return Object.assign({}, state, {

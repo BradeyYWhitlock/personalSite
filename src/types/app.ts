@@ -23,9 +23,11 @@ export interface ContactMeProps {
     setEmailSender: Function;
     setEmailMessage: Function;
     setEmailResponse: Function;
+    setLoadingEmailSent: Function;
     emailSender: string;
     emailMessage: string;
     emailResponse: Record<string, any>;
+    loadingEmailSent: boolean;
 }
 
 export interface Tweet {
@@ -43,4 +45,5 @@ export interface AppState {
     emailMessage: string;
     emailResponse: Record<string, any>;
     projectSelected: string;
+    loadingEmailSent: boolean;
 }

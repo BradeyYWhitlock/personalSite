@@ -1,13 +1,16 @@
 // Color Variables
 
 // UI Colors
-$primaryDark: #28262c;
-$primaryColor: #2c3896;
-$primaryLight: #f9f5ff;
+$primaryDarkest: #28262c;
+$primaryDarker: #039081;
+$primaryColor: #04C2B5;
+$primaryLighter: #B1F0EE;
+$primaryLightest: #f9f5ff;
 
 // Exporting to be used in code if necessary
 :export {
-    primaryDark: $primaryDark;
+    primaryDarkest: $primaryDarkest;
     primaryColor: $primaryColor;
-    primaryLight: $primaryLight;
+    primaryLighter: $primaryLighter;
+    primaryLight: $primaryLightest;
 }
