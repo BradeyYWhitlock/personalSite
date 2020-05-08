@@ -10,6 +10,7 @@ import Instagram from '../../assets/images/socialMediaIcons/instagramIcon.png'
 import LinkedIn from '../../assets/images/socialMediaIcons/linkedInIcon.png'
 
 import './styles/home.scss'
+import './styles/skills.scss'
 
 function mapDispatchToProps(dispatch: Function) {
     return {
@@ -29,6 +30,10 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
         var isMobile = window.innerWidth <= 500;
         props.setIsMobile(isMobile)
     })
+
+    const wholeStar = (<i className="fas fa-star"></i>)
+    const halfStar = (<i className="fas fa-star-half-alt"></i>)
+    const noStar = (<i className="far fa-star"></i>)
 
     return (
         <Fragment>
@@ -60,6 +65,115 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                     <div className='hT hvr-bob'>
                         <div>HIIT Tracker</div>
                         <div>React Native</div>
+                    </div>
+                </div>
+            </div>
+            <div className='skillsHeader'>Skills</div>
+            <div className='skills'>
+                <div className='skillsSection'>
+                    <div className='skillsItem'>
+                        <div className='specificSkillsHeader'>Front End</div>
+                        <div className='specificSkills'>
+                            <div className='mobileSkills'>
+                                <div className='skillColumn'>
+                                    <div className='individualSkillStarLabel'>React</div>
+                                    <div className='individualSkillStarLabel'>Redux</div>
+                                    <div className='individualSkillStarLabel'>Mobx</div>
+                                </div>
+                                <div className='skillColumn'>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {wholeStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {halfStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {noStar}</div>
+                                </div>
+                            </div>
+                            <div className='mobileSkills'>
+                                <div className='skillColumn leftMargin'>
+                                    <div className='individualSkillStarLabel'>Javascript</div>
+                                    <div className='individualSkillStarLabel'>Typescript</div>
+                                    <div className='individualSkillStarLabel'>Webpack</div>
+                                </div>
+                                <div className='skillColumn'>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {wholeStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {noStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {halfStar} {noStar}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='skillsItem'>
+                        <div className='specificSkillsHeader'>Back End</div>
+                        <div className='specificSkills'>
+                            <div className='mobileSkills'>
+                                <div className='skillColumn'>
+                                    <div className='individualSkillStarLabel'>Node.js</div>
+                                    <div className='individualSkillStarLabel'>Kotlin</div>
+                                    <div className='individualSkillStarLabel'>Java</div>
+                                </div>
+                                <div className='skillColumn'>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {halfStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {noStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {halfStar} {noStar}</div>
+                                </div>
+                            </div>
+                            <div className='mobileSkills'>
+                                <div className='skillColumn leftMargin'>
+                                    <div className='individualSkillStarLabel'>Jenkins</div>
+                                    <div className='individualSkillStarLabel'>Serverless</div>
+                                    <div className='individualSkillStarLabel'>Firebase</div>
+                                </div>
+                                <div className='skillColumn'>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {noStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {halfStar} {noStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {noStar}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='skillsSection'>
+                <div className='skillsItem'>
+                        <div className='specificSkillsHeader'>AWS Cloud</div>
+                        <div className='specificSkills'>
+                            <div className='mobileSkills'>
+                                <div className='skillColumn'>
+                                    <div className='individualSkillStarLabel'>CloudFront</div>
+                                    <div className='individualSkillStarLabel'>Lambda</div>
+                                    <div className='individualSkillStarLabel'>Step Func</div>
+                                </div>
+                                <div className='skillColumn'>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {noStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {noStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {halfStar} {noStar}</div>
+                                </div>
+                            </div>
+                            <div className='mobileSkills'>
+                                <div className='skillColumn leftMargin'>
+                                    <div className='individualSkillStarLabel'>SQS</div>
+                                    <div className='individualSkillStarLabel'>S3</div>
+                                </div>
+                                <div className='skillColumn'>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {noStar}</div>
+                                    <div className='skillStars'>{wholeStar} {wholeStar} {wholeStar} {wholeStar} {wholeStar}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='skillsItem' style={{height: '180px'}}>
+                        <div className='specificSkillsHeader' style={{width: '180px'}}>Mobile</div>
+                        <div className='specificSkills'>
+                            <div className='mobileSkills'>
+                                <div className='skillColumn'>
+                                    <div className='individualSkillStarLabel'>React Nat</div>
+                                    <div className='individualSkillStarLabel'>Swift</div>
+                                    <div className='individualSkillStarLabel'>Android</div>
+                                </div>
+                                <div className='skillColumn'>
+                                    <div className='skillStars'><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i></div>
+                                    <div className='skillStars'><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i></div>
+                                    <div className='skillStars'><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

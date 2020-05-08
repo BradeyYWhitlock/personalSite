@@ -1,0 +1,158 @@
+@import '../../../styles/colors';
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileSkills {
+    display: flex;
+}
+
+.skillsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    min-width: 800px;
+    margin-bottom: 200px;
+}
+
+.skillsPicture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+.skillsHeader {
+    text-align: center;
+}
+
+.skillsHeader {
+    color: $primaryDarkest;
+    font-size: 40px;
+}
+
+.leftMargin {
+    margin-left: 50px;
+}
+
+.skillsItem {
+    position: relative;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    width: 80%;
+    height: 200px;
+    background-color: #04C2B5;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+.specificSkillThreePiece {
+    width: 300px;
+}
+
+.skillStars {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 39px;
+}
+
+.individualSkillStarLabel {
+    font-size: 25px;
+    text-align: right;
+}
+
+.skillStarsAndName {
+    width: 230px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skillColumn {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.specificSkillsHeader {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    font-size: 35px;
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: left top;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    letter-spacing: 1px;
+}
+
+.specificSkills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-left: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+    .skills {
+        flex-direction: column;
+        margin-bottom: 200px;
+    }
+
+    .skillColumn {
+        height: auto;
+        width: 100px;
+        text-align: right;
+        margin-left: 0px;
+    }
+
+    .skillsSection {
+        min-width:370px;
+        margin-bottom: 0px;
+    }
+
+    .skillsItem {
+        height: 230px;
+        width: 95%;
+    }
+
+    .skillStars {
+        height: 29px;
+    }
+
+    .specificSkills {
+        flex-direction: column;
+        margin-left: 70px;
+    }
+
+    .individualSkillStarLabel {
+        font-size: 20px;
+    }
+
+    .specificSkillsHeader {
+        width: 230px;
+    }
+
+    .mobileSkills {
+        display: flex;
+        width: 220px;
+        height: 110px;
+        justify-content: center;
+        align-items: center;
+    }
+
+  }

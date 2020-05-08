@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-around;
     width: 600px;
-    flex-direction: row;
+    flex-direction: column;
     color: white;
     font-family: monospace;
     font-size: 20px;
@@ -32,6 +32,7 @@
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    margin-top: 20px;
     background-color: $primaryColor !important;
     border: 1px solid $primaryColor !important;
     &:hover {
@@ -64,22 +65,18 @@
 
 }
 
-.sendEmailButton {
-    padding: 10px;
-    background-color: $primaryColor;
-    border: none;
-    font-size: 25px;
-    color: $primaryLightest;
-}
-
 .planeIcon {
     margin-left: 10px;
 }
 
 .message {
-    width: 400px !important;
+    width: 500px !important;
     font-size: 16px !important;
     margin-top: 20px !important;
+}
+
+.sender {
+    width: 300px !important;
 }
 
 .send{

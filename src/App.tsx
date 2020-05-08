@@ -15,8 +15,6 @@ class App extends Component<RouteComponentProps> {
     public render(): ReactNode {
         return (
             <Fragment>
-                {/* <Header /> */}
-                <div className="appContentContainer">
                     <Switch>
                         {Routes.map(
                             (routeObj: AppRoute): ReactNode => {
@@ -31,7 +29,6 @@ class App extends Component<RouteComponentProps> {
                         )}
                         <Redirect from={'*'} to={'/home'} />
                     </Switch>
-                </div>
             </Fragment>
         );
     }
