@@ -68,10 +68,10 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                     </div>
                 </div>
             </div>
-            <div className='skillsHeader' data-aos='fadeInMyInfo'>Skills</div>
+            <div className='skillsHeader' data-aos='fade-in'>Skills</div>
             <div className='skills'>
                 <div className='skillsSection'>
-                    <div className='skillsItem' data-aos='fadeInMyInfo'>
+                    <div className='skillsItem' data-aos='flip-up'>
                         <div className='specificSkillsHeader'>Front End</div>
                         <div className='specificSkills'>
                             <div className='mobileSkills'>
@@ -100,7 +100,7 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                             </div>
                         </div>
                     </div>
-                    <div className='skillsItem' data-aos='fadeInMyInfo'>
+                    <div className='skillsItem' data-aos='flip-up'>
                         <div className='specificSkillsHeader'>Back End</div>
                         <div className='specificSkills'>
                             <div className='mobileSkills'>
@@ -131,7 +131,7 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                     </div>
                 </div>
                 <div className='skillsSection'>
-                <div className='skillsItem' data-aos='fadeInMyInfo'>
+                <div className='skillsItem' data-aos='flip-up'>
                         <div className='specificSkillsHeader'>AWS Cloud</div>
                         <div className='specificSkills'>
                             <div className='mobileSkills'>
@@ -158,7 +158,7 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                             </div>
                         </div>
                     </div>
-                    <div className='skillsItem' data-aos='fadeInMyInfo' style={{height: '180px'}}>
+                    <div className='skillsItem' data-aos='flip-up' style={{height: '180px'}}>
                         <div className='specificSkillsHeader' style={{width: '180px'}}>Mobile</div>
                         <div className='specificSkills'>
                             <div className='mobileSkills'>
