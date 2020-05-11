@@ -47,7 +47,7 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                             <a target='_blank' href='https://www.linkedin.com/in/bradey-whitlock-8319358a/'><img src={LinkedIn} className='socialIconlinkedIn'/></a>
                         </div>
                     </div>
-                    <div className='aboutMe'>Hi, I'm Brady Yarbrough Whitlock. This is an example of what I would put here if I were done with this section. Thanks for reading!</div>
+                    <div className='aboutMe'>Hi, I'm Brady Yarbrough Whitlock, a full stack developer with extra interest in front end development.</div>
                     <div>
                         <ContactMe />
                     </div>

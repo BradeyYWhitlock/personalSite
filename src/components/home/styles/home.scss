@@ -97,10 +97,6 @@
     z-index:-1;
     border-radius: 10px;
     opacity: 0.6; /* Here is your opacity */
-
-    &:hover {
-        opacity: 1;
-    }
 }
 .tcl {
     display: flex;
@@ -112,6 +108,10 @@
     width: 600px;
     margin-bottom: 20px;
     box-shadow: 5px 10px 10px #111013;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 
@@ -126,10 +126,6 @@
     z-index:-1;
     border-radius: 10px;
     opacity: 0.6; /* Here is your opacity */
-
-    &:hover {
-        opacity: 1;
-    }
 }
 .malf {
     display: flex;
@@ -141,6 +137,10 @@
     width: 600px;
     margin-bottom: 20px;
     box-shadow: 5px 10px 10px #111013;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .hT:after {
@@ -154,10 +154,6 @@
     z-index:-1;
     border-radius: 10px;
     opacity: 0.6; /* Here is your opacity */
-
-    &:hover {
-        opacity: 1;
-    }
 }
 .hT {
     display: flex;
@@ -169,6 +165,10 @@
     width: 600px;
     margin-bottom: 20px;
     box-shadow: 5px 10px 10px #111013;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 @media only screen and (max-width: 600px) {
