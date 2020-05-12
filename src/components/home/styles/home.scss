@@ -91,6 +91,20 @@
     margin-bottom: 10px;
 }
 
+.setTheme {
+    position: absolute;
+    transform: rotate(90deg);
+    right: -35px;
+    top: 45%;
+    background-color: black;
+    padding: 10px;
+    height: fit-content;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .home {
         flex-direction: column;

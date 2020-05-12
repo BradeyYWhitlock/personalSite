@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, Fragment } from 'react';
+import React, { ReactElement, useEffect, Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { setIsMobile } from '../../actions/app'
 import { HomeProps } from '../../types/app'
@@ -31,13 +31,48 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
         props.setIsMobile(isMobile)
     })
 
+    const [darkestColor, setDarkestColor] = useState('')
+    const [primaryColor, setPrimaryColor] = useState('')
+
+    const getColor = (type: any) => {
+        var letters = ''.split('')
+        if(type == 'darkest') {
+            letters = '0123456'.split('')
+        } else if (type == 'primary') {
+            letters = '0123456789ABCDEF'.split('')
+        } else {
+            letters = 'BCDEF'.split('')
+        }
+
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * letters.length)];
+        }
+
+        if(type == 'darkest') {
+            setDarkestColor(color)
+        } else if (type == 'lightest') {
+            document.body.style.backgroundColor = color
+        } else {
+            setPrimaryColor(color)
+        }
+      }
+
+
+    const getNewTheme = () => {
+        getColor('darkest')
+        getColor('primary')
+        getColor('lightest')
+    }
+
     const wholeStar = (<i className="fas fa-star"></i>)
     const halfStar = (<i className="fas fa-star-half-alt"></i>)
     const noStar = (<i className="far fa-star"></i>)
 
     return (
         <Fragment>
-            <div className='home'>
+            <div className={'home'} style={darkestColor !== '' ? {backgroundColor: darkestColor} : {}}>
+                <div onClick={() => getNewTheme()} className='setTheme'>Set New Theme</div>
                 <div className='myInfoSection'>
                     <div className='aboutMeSection'>
                         <img src={MyPicture} className='homePicture'/>
@@ -71,7 +106,7 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
             <div className='skillsHeader' data-aos='fade-in'>Skills</div>
             <div className='skills'>
                 <div className='skillsSection'>
-                    <div className='skillsItem' data-aos='flip-up'>
+                    <div className='skillsItem' data-aos='flip-up' style={primaryColor !== '' ? {backgroundColor: primaryColor} : {}}>
                         <div className='specificSkillsHeader'>Front End</div>
                         <div className='specificSkills'>
                             <div className='mobileSkills'>
@@ -100,7 +135,7 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                             </div>
                         </div>
                     </div>
-                    <div className='skillsItem' data-aos='flip-up'>
+                    <div className='skillsItem' data-aos='flip-up' style={primaryColor !== '' ? {backgroundColor: primaryColor} : {}}>
                         <div className='specificSkillsHeader'>Back End</div>
                         <div className='specificSkills'>
                             <div className='mobileSkills'>
@@ -131,7 +166,7 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                     </div>
                 </div>
                 <div className='skillsSection'>
-                <div className='skillsItem' data-aos='flip-up'>
+                <div className='skillsItem' data-aos='flip-up' style={primaryColor !== '' ? {backgroundColor: primaryColor} : {}}>
                         <div className='specificSkillsHeader'>AWS Cloud</div>
                         <div className='specificSkills'>
                             <div className='mobileSkills'>
@@ -158,7 +193,7 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
                             </div>
                         </div>
                     </div>
-                    <div className='skillsItem' data-aos='flip-up' style={{height: '180px'}}>
+                    <div className='skillsItem' data-aos='flip-up' style={primaryColor !== '' ? {backgroundColor: primaryColor} : {}}>
                         <div className='specificSkillsHeader' style={{width: '180px'}}>Mobile</div>
                         <div className='specificSkills'>
                             <div className='mobileSkills'>
