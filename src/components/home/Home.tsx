@@ -65,6 +65,12 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
         getColor('lightest')
     }
 
+    const removeTheme = () => {
+        document.body.style.backgroundColor = '#f9f5ff';
+        setDarkestColor('')
+        setPrimaryColor('')
+    }
+
     const wholeStar = (<i className="fas fa-star"></i>)
     const halfStar = (<i className="fas fa-star-half-alt"></i>)
     const noStar = (<i className="far fa-star"></i>)
@@ -72,7 +78,10 @@ const Home: React.FC<HomeProps> = (props): ReactElement => {
     return (
         <Fragment>
             <div className={'home'} style={darkestColor !== '' ? {backgroundColor: darkestColor} : {}}>
-                <div onClick={() => getNewTheme()} className='setTheme'>Set New Theme</div>
+                {!props.isMobile && <div className='setTheme'>
+                    <div onClick={() => getNewTheme()}>Set New Theme</div>
+                    <div className='removeThemeButton' onClick={() => removeTheme()}><i className="far fa-times-circle"></i></div>
+                </div>}
                 <div className='myInfoSection'>
                     <div className='aboutMeSection'>
                         <img src={MyPicture} className='homePicture'/>

@@ -93,8 +93,9 @@
 
 .setTheme {
     position: absolute;
+    display: flex;
     transform: rotate(90deg);
-    right: -35px;
+    right: -48px;
     top: 45%;
     background-color: black;
     padding: 10px;
@@ -103,6 +104,10 @@
     &:hover {
         cursor: pointer;
     }
+}
+
+.removeThemeButton {
+    margin-left: 10px;
 }
 
 @media only screen and (max-width: 600px) {
